@@ -1,23 +1,17 @@
 package com.gmail.tsa;
 
-import java.util.Scanner;
+import java.util.Formatter;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Input binary number");
-		int numb = 0;
-		char[] num = sc.nextLine().toCharArray();
-		for (int i = num.length - 1; i >= 0; i--) {
-			if (num[i] != '0') {
-				numb += (int) (Math.pow(2, (num.length - (i + 1))));
-			}
+		// TODO Auto-generated method stub
+		Formatter fr = new Formatter();
+		for (int i = 2; i <= 11; i++) {
+			fr.format("%." + i + "f  \n", Math.PI);
 		}
-		String number = new String(num);
-		System.out.println(number + " -> " + numb);
-		sc.close();
-
+		System.out.println(fr.toString());
+		fr.close();
 	}
 
 }
